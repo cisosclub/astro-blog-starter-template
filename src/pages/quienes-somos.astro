@@ -1,1 +1,53 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
 
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead
+			title={`Quiénes somos | ${SITE_TITLE}`}
+			description="Un grupo de profesionales multidisciplinarios de seguridad y resiliencia digital."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Quiénes somos</h1>
+			<p>
+				Somos un grupo de profesionales multidisciplinarios de seguridad y
+				resiliencia digital. No vendemos tecnología: ayudamos a las
+				organizaciones a construir posturas de seguridad confiables y con valor
+				para su negocio, y a los profesionales de seguridad a crecer.
+			</p>
+
+			<h2>Nuestra misión</h2>
+			<p>
+				Facilitar en las organizaciones el camino para construir posturas de
+				confianza y resiliencia digital.
+			</p>
+
+			<h2>Nuestra visión</h2>
+			<p>
+				Que su postura de seguridad genere confianza en su entorno digital.
+			</p>
+
+			<h2>A quiénes servimos</h2>
+			<p>
+				A las organizaciones, poniendo a su alcance liderazgo y estrategia de
+				seguridad. A los profesionales de seguridad, acompañando su crecimiento.
+				Y a la comunidad, a través de <a href="https://cisos.club">cisos.club</a>.
+			</p>
+
+			<!--
+				Sección de prueba (testimonios de LinkedIn).
+				Pendiente: pegar aquí los comentarios reales con nombre y cargo.
+				No usar textos inventados.
+			-->
+		</main>
+		<Footer />
+	</body>
+</html>

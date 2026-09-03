@@ -1,0 +1,116 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+// Testimonios anonimizados: cita + cargo (con sector solo donde es público y verificable).
+const testimonios = [
+	{
+		texto:
+			'Definitivamente Andrés es el mejor mentor que puedes encontrar en Latam referente de temas de liderazgo en ciberseguridad. Siempre te hace reflexionar, y posicionarte de forma correcta para el reto que tienes que enfrentar. Realmente invito a todos los que requieran una mentoría de este nivel que no lo piensen: será una inversión que valdrá la pena.',
+		cargo: 'Country CISO, sector fintech',
+	},
+	{
+		texto:
+			'Tuve la oportunidad de trabajar en un proyecto de ejercicio de respuesta a incidentes con Andrés y el resultado fue exitoso, con el cumplimiento de los objetivos planteados. Más allá de su ejecución, su visión estratégica de la ciberseguridad es increíble. Andrés cuenta con la habilidad de fomentar espacios de reflexión colaborativa y constructiva.',
+		cargo: 'CISO, ciberseguridad y ciberriesgo',
+	},
+	{
+		texto:
+			'Muy productivo el ejercicio, nos ayudó a mejorar los niveles de conciencia y responsabilidad en el equipo. Se cumplieron los objetivos planteados y se generó una retroalimentación participativa y muy constructiva, con compromisos claros.',
+		cargo: 'CISO y Head of Cyber Security',
+	},
+	{
+		texto:
+			'Excelentes ponencias. El contenido fue claro, relevante y aplicable, con ejemplos que facilitaron la comprensión de los temas. Se destacó el dominio del ponente, su capacidad para mantener la atención de la audiencia y la apertura para responder consultas. Sin duda, una sesión de mucho valor para los participantes.',
+		cargo: 'CISO, sector asegurador',
+	},
+	{
+		texto:
+			'Andrés es un profesional altamente capacitado, con una visión estratégica integral en ciberseguridad. Su enfoque actualizado le permite aportar soluciones y servicios innovadores que fortalecen la seguridad y alinean las iniciativas de ciberseguridad con los objetivos de negocio.',
+		cargo: 'Cybersecurity Manager (CISSP, CISM)',
+	},
+	{
+		texto:
+			'Andrés es un ser humano que se interesa por crecer primero en esa dimensión, lo que lo hace un muy buen profesional en todos los sentidos. Se involucra en iniciativas que fortalecen nuestra comunidad y en proyectos que ayudan al país y la sociedad. Es un mentor con gran capacidad de enseñanza y, a la vez, de aprendizaje.',
+		cargo: 'Consultora en ciberseguridad y cultura de seguridad',
+	},
+	{
+		texto:
+			'Andrés es un experto altamente calificado; su amplia experiencia garantiza el logro de los objetivos establecidos en los proyectos. Además posee un agudo sentido de los negocios que le permite abordar cualquier situación en los diversos mercados.',
+		cargo: 'Executive Cybersecurity Strategist',
+	},
+];
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead
+			title={`Testimonios | ${SITE_TITLE}`}
+			description="Lo que dicen líderes de seguridad que han trabajado con nosotros."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Lo que dicen quienes han trabajado con nosotros</h1>
+			<p>
+				Evaluaciones de líderes de seguridad, recogidas públicamente en
+				LinkedIn.
+			</p>
+
+			<div class="testimonios">
+				{
+					testimonios.map((t) => (
+						<blockquote class="testimonio">
+							<p>{t.texto}</p>
+							<footer>{t.cargo}</footer>
+						</blockquote>
+					))
+				}
+			</div>
+
+			<!--
+				REEMPLAZAR la URL de abajo por la de tu perfil o página de LinkedIn
+				donde están públicas estas recomendaciones. Mientras no la cambies,
+				el enlace no llevará a ningún lado útil.
+			-->
+			<p class="fuente">
+				Estas y otras valoraciones están públicas en
+				<a href="URL_DE_LINKEDIN_AQUI" rel="noopener" target="_blank">LinkedIn</a>.
+			</p>
+
+			<p class="cierre">
+				¿Quiere una conversación así para su organización?
+				<a href="/contacto">Conversemos</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.testimonios {
+		margin-block: 2rem;
+	}
+	.testimonio {
+		margin: 0 0 2rem;
+		padding: 1rem 1.25rem;
+		border-left: 3px solid rgb(var(--gray-light, 229 233 240));
+	}
+	.testimonio p {
+		margin: 0 0 0.75rem;
+	}
+	.testimonio footer {
+		font-size: 0.9rem;
+		color: rgb(var(--gray, 96 115 159));
+	}
+	.fuente {
+		font-size: 0.95rem;
+	}
+	.cierre {
+		margin-top: 2rem;
+	}
+</style>

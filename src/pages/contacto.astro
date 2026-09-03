@@ -1,1 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
 
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead
+			title={`Contacto | ${SITE_TITLE}`}
+			description="Conversemos sobre la postura de seguridad digital de su negocio."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Conversemos</h1>
+			<p>
+				Permítanos ser un facilitador en el desarrollo de la postura de
+				seguridad digital de su negocio.
+			</p>
+
+			<p>
+				Correo: <a href="mailto:conectate@cisos.co">conectate@cisos.co</a>
+			</p>
+			<p>
+				WhatsApp:
+				<a href="https://wa.me/50768918395">+507 6891 8395</a>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

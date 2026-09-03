@@ -1,1 +1,113 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
 
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead
+			title={`Servicios | ${SITE_TITLE}`}
+			description="Liderazgo, estrategia y formación de seguridad digital como servicio para su organización."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Servicios</h1>
+			<p>
+				Ponemos a su alcance el liderazgo, la estrategia y la formación de
+				seguridad digital que su organización necesita, en la modalidad que le
+				sirva. Estos son los frentes en los que acompañamos.
+			</p>
+
+			<section class="servicio">
+				<h2>CISO y CPO como Servicio</h2>
+				<p>
+					El CISO, y si lo necesita el CPO de privacidad, como recurso experto y
+					estratégico para su organización, sin contratarlo de planta. Nos
+					integramos a su equipo como asesores de confianza para dirigir la
+					seguridad y la privacidad que habilitan el negocio. Para
+					organizaciones que no tienen esa función o quieren reforzarla.
+				</p>
+			</section>
+
+			<section class="servicio">
+				<h2>Líder de Seguridad Digital como Servicio</h2>
+				<p>
+					Cuando necesita la función de seguridad y no tiene quién la lleve. En
+					tres modalidades: a demanda, para requerimientos puntuales de hasta
+					tres meses; como asesor, para las funciones esenciales de seguridad por
+					periodos desde un año; y como mentor, para acompañar y hacer crecer al
+					líder de seguridad que ya tiene.
+				</p>
+			</section>
+
+			<section class="servicio">
+				<h2>Valoración y construcción de su postura de seguridad</h2>
+				<p>
+					Consultoría y acompañamiento estratégico. Partimos de dónde está hoy
+					su seguridad, definimos a dónde quiere llegar y construimos con usted
+					el plan y la postura para lograrlo, pensando en el riesgo cibernético
+					que afecta al negocio.
+				</p>
+			</section>
+
+			<section class="servicio">
+				<h2>Resiliencia cibernética</h2>
+				<p>
+					Preparamos a su organización para responder ante una crisis
+					cibernética: simulacros tipo Table Top, diseño de playbooks de
+					respuesta, sesiones BoardonBoard para juntas directivas, y charlas y
+					conferencias a la medida de directivos, ejecutivos y equipos.
+				</p>
+			</section>
+
+			<section class="servicio">
+				<h2>Mentoring y coaching para profesionales de seguridad</h2>
+				<p>
+					Acompañamos el crecimiento del profesional de seguridad: definición de
+					plan de carrera, desarrollo de capacidades ejecutivas y estratégicas,
+					mentoring y coaching. Lo solicita la empresa para su gente o el
+					profesional por decisión propia.
+				</p>
+			</section>
+
+			<section class="servicio">
+				<h2>Acompañamiento por bolsas de horas</h2>
+				<p>
+					Cuando necesita apoyo flexible y no un contrato permanente. Bolsas de
+					10, 20 o 40 horas, de consumo mensual o a demanda, para emisión de
+					conceptos, acompañamiento en seguridad y apoyo a procesos de
+					auditoría.
+				</p>
+			</section>
+
+			<p class="sectores">
+				Trabajamos con sectores como financiero, gobierno, telecomunicaciones,
+				retail, servicios y energía.
+			</p>
+
+			<p>
+				¿No sabe cuál encaja con su situación? <a href="/contacto">Conversemos</a>
+				y lo definimos juntos.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.servicio {
+		margin-block: 2rem;
+	}
+	.servicio h2 {
+		margin-bottom: 0.4rem;
+	}
+	.sectores {
+		margin-top: 2.5rem;
+		font-style: italic;
+	}
+</style>
