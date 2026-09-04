@@ -34,16 +34,59 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<p>
 			</p>
             <section class="producto">
-	              <h2>Empiece por su cuenta</h2>
-	        <p>
-		       <strong>Playbook Personal del CISO en Crisis.</strong> Cómo un CISO lidera,
-		        comunica y se protege como persona cuando su organización está bajo un
-		        ataque. Diez artefactos prácticos para el antes, el durante y el después.
-	        </p>
-	        <p>
-		       <a href="https://payhip.com/b/lNZM7" target="_blank" rel="noopener">Ver el Playbook, $19.99</a>
-	        </p>
-            </section>
+	<div class="producto-card">
+		<img
+			class="producto-img"
+			src="https://pe56d.s3.amazonaws.com/o_1k1fs0klt12on1t5m1sgoau04md1c.png"
+			alt="Portada del Playbook Personal del CISO en Crisis"
+		/>
+		<div class="producto-texto">
+			<h2>Empiece por su cuenta</h2>
+			<p>
+				<strong>Playbook Personal del CISO en Crisis.</strong> Cómo un CISO
+				lidera, comunica y se protege como persona cuando su organización está
+				bajo un ataque. Diez artefactos prácticos para el antes, el durante y el
+				después.
+			</p>
+			<p>
+				<a href="https://payhip.com/b/lNZM7" target="_blank" rel="noopener">Ver el Playbook, $19.99</a>
+			</p>
+		</div>
+	</div>
+	<style>
+		.producto {
+			margin-block: 3rem;
+		}
+		.producto-card {
+			display: flex;
+			gap: 1.5rem;
+			align-items: center;
+			padding: 1.5rem;
+			border: 1px solid rgb(var(--gray-light, 229 233 240));
+			border-radius: 12px;
+		}
+		.producto-img {
+			width: 180px;
+			max-width: 40%;
+			height: auto;
+			border-radius: 8px;
+			flex-shrink: 0;
+		}
+		.producto-texto h2 {
+			margin-top: 0;
+		}
+		@media (max-width: 600px) {
+			.producto-card {
+				flex-direction: column;
+				text-align: center;
+			}
+			.producto-img {
+				width: 60%;
+				max-width: 220px;
+			}
+		}
+	</style>
+</section>
 		</main>
 		<Footer />
 	</body>
